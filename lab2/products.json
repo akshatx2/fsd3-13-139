@@ -3,7 +3,7 @@
     "id": 1,
     "name": "HPlaptop",
     "price": 120000,
-    "qty": 3
+    "qty": 7
   },
   {
     "id": 2,
@@ -16,5 +16,11 @@
     "name": "HPlaptop",
     "price": 120000,
     "qty": 1
+  },
+  {
+    "id": 1,
+    "name": "HPlaptop",
+    "price": 120000,
+    "qty": 4
   }
 ]
