@@ -13,10 +13,11 @@ const server = http.createServer((req, res) => {
 });
         req.on("end", () => {
             const product = JSON.parse(body);
-            console.log("received product :", product);
+            console.log("received products ", product);
+            res.statusCode = 201;
+        res.end(JSON.stringify({msg : 'product added' , product}));
 })
-        res.statusCode = 200;
-        res.end("Post request");
+        
 
     }
       else  if (req.url === '/' && req.method === "PUT") {
