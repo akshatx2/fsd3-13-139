@@ -5,7 +5,16 @@ const server = http.createServer((req, res) => {
         res.end("Get request");
 
     }
-   else  if (req.url === '/' && req.method === "POST") {
+    else if (req.url === '/' && req.method === "POST") {
+        // console.log("Request :" , req);
+        let body = ''
+        req.on("data" , (chunk)=> { 
+    body+= chunk 
+});
+        req.on("end", () => {
+            const product = JSON.parse(body);
+            console.log("received product :", product);
+})
         res.statusCode = 200;
         res.end("Post request");
 
