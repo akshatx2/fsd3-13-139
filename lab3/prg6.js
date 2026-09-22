@@ -1,6 +1,7 @@
 import http from 'http'
 import { getAllProducts } from "./products.js"
-import { addProduct} from "./products.js"
+import { addProduct } from "./products.js"
+import {deleteProduct} from "./products.js"
 const server = http.createServer((req, res) => {
   if (req.url === "/api/v1/products" && req.method === 'GET') {
       res.statusCode = 200;
@@ -39,9 +40,16 @@ const server = http.createServer((req, res) => {
       res.statusCode = 200
       res.end(JSON.stringify({ msg: 'product updated', product }))
     })
-  } else if (req.url === '/' && req.method === 'DELETE') {
-    res.statusCode = 200
-    res.end('Delete request')
+  } else if (req.url.startsWith("/api/v1/products/") && req.method === 'DELETE') {
+      const pid = Number(req.url.split('/').pop());
+      res.statusCode = 200
+      if (deleteProduct(pid)) {
+          res.end(JSON.stringify({ msg: "item deleted" }));
+      }
+      else { 
+          res.end(JSON.stringify({ msg: 'product with id ${pid} not found' }));
+    }
+    
   } else {
     res.statusCode = 404
     res.end('request not found ')
