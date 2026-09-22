@@ -1,5 +1,6 @@
 import http from 'http'
 import { getAllProducts } from "./products.js"
+import { addProduct} from "./products.js"
 const server = http.createServer((req, res) => {
   if (req.url === "/api/v1/products" && req.method === 'GET') {
       res.statusCode = 200;
@@ -18,10 +19,11 @@ const server = http.createServer((req, res) => {
       body += chunk
     })
     req.on('end', () => {
-      const product = JSON.parse(body)
+        const product = JSON.parse(body)
+        const item = addProduct(product)
       console.log('received products ', product)
       res.statusCode = 201
-      res.end(JSON.stringify({ msg: 'product added', product }))
+      res.end(JSON.stringify({ msg: 'product receieved ', data : item }))
     })
   } else if (req.url.startsWith('/products/') && req.method === 'PUT') {
     const productID = req.url.split('/').pop()
