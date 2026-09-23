@@ -86,3 +86,19 @@ the content type and status code can be send back to client by two ways
     5. application/form-data -> for uploading file
     6.application/auth ->
 
+
+
+
+
+## For GET
+- No parameter passed to the srver when we recieve all items 
+
+
+## For POST
+- To add record , we pass the value from body section in JSON format of api tester  
+
+## For DELETE
+- To delete any product we pass the parameter that is id of the product from url
+
+## For UPDATE (put/patch)
+- we pass ID from url and data to update from body  
