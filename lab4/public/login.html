@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="BrightPath Tuition Classes - quality learning for school students.">
-<title>Home | BrightPath Tuition</title>
+<title>Login | BrightPath Tuition</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -18,7 +18,7 @@
   <ul class="nav-links">
    <li><a href="index.html" class="nav-home">Home</a></li>
    <li><a href="register.html" class="nav-register">Registration</a></li>
-   <li><a href="login.html" class="nav-login">Login</a></li>
+   <li><a href="login.html" class="nav-login active">Login</a></li>
    <li><a href="courses.html" class="nav-courses">Courses</a></li>
    <li><a href="feedback.html" class="nav-feedback">Feedback</a></li>
   </ul>
@@ -26,28 +26,20 @@
 </nav>
 
 
-<section class="hero">
- <div class="hero-inner">
-  <span class="badge">Learn • Practice • Succeed</span>
-  <h1>Build Strong Foundations for a Brighter Future</h1>
-  <p class="lead">Quality tuition classes for school students with experienced teachers, focused learning, regular practice and personal attention.</p>
-  <a class="btn" href="register.html"><i class="fa-solid fa-user-plus"></i> Register Now</a>
-  <a class="btn secondary" href="courses.html"><i class="fa-solid fa-book-open"></i> Explore Courses</a>
- </div>
-</section>
 <section class="section">
  <div class="container">
-  <div class="section-title"><h2>Why Choose Our Classes?</h2><p class="lead">A simple, student-friendly approach designed around consistent progress.</p></div>
-  <div class="grid">
-   <div class="card"><div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div><h3>Expert Teachers</h3><p>Learn concepts clearly from dedicated and supportive educators.</p></div>
-   <div class="card"><div class="icon"><i class="fa-solid fa-people-group"></i></div><h3>Small Batches</h3><p>More interaction, questions and individual attention in every class.</p></div>
-   <div class="card"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><h3>Regular Progress</h3><p>Practice tests and feedback help students identify and improve weak areas.</p></div>
-  </div>
-  <div class="stats">
-   <div class="stat"><strong>500+</strong>Students Guided</div>
-   <div class="stat"><strong>15+</strong>Expert Teachers</div>
-   <div class="stat"><strong>10+</strong>Courses</div>
-   <div class="stat"><strong>95%</strong>Parent Satisfaction</div>
+  <div class="form-wrap" style="max-width:520px">
+   <div class="section-title"><span class="badge">Student Portal</span><h2>Welcome Back</h2><p class="lead">Login to access your classes, course information and learning updates.</p></div>
+   <form onsubmit="event.preventDefault(); alert('Demo login submitted!');">
+    <div class="field"><label>Email / Phone</label><input type="text" placeholder="Enter email or phone" required></div>
+    <div class="field"><label>Password</label><input type="password" placeholder="Enter password" required></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:15px;margin:8px 0 20px;font-size:.92rem">
+      <label style="font-weight:500"><input type="checkbox" style="width:auto;margin-right:6px"> Remember me</label>
+      <a href="#" style="color:var(--primary);font-weight:700">Forgot password?</a>
+    </div>
+    <button class="btn" style="width:100%;justify-content:center" type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+    <p style="text-align:center;margin-top:20px;color:var(--muted)">New student? <a href="register.html" style="color:var(--primary);font-weight:700">Register here</a></p>
+   </form>
   </div>
  </div>
 </section>

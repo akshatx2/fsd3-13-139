@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="BrightPath Tuition Classes - quality learning for school students.">
-<title>Home | BrightPath Tuition</title>
+<title>Feedback | BrightPath Tuition</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -20,34 +20,28 @@
    <li><a href="register.html" class="nav-register">Registration</a></li>
    <li><a href="login.html" class="nav-login">Login</a></li>
    <li><a href="courses.html" class="nav-courses">Courses</a></li>
-   <li><a href="feedback.html" class="nav-feedback">Feedback</a></li>
+   <li><a href="feedback.html" class="nav-feedback active">Feedback</a></li>
   </ul>
  </div>
 </nav>
 
 
-<section class="hero">
- <div class="hero-inner">
-  <span class="badge">Learn • Practice • Succeed</span>
-  <h1>Build Strong Foundations for a Brighter Future</h1>
-  <p class="lead">Quality tuition classes for school students with experienced teachers, focused learning, regular practice and personal attention.</p>
-  <a class="btn" href="register.html"><i class="fa-solid fa-user-plus"></i> Register Now</a>
-  <a class="btn secondary" href="courses.html"><i class="fa-solid fa-book-open"></i> Explore Courses</a>
- </div>
-</section>
 <section class="section">
  <div class="container">
-  <div class="section-title"><h2>Why Choose Our Classes?</h2><p class="lead">A simple, student-friendly approach designed around consistent progress.</p></div>
+  <div class="section-title"><span class="badge">We Value Your Opinion</span><h2>Student & Parent Feedback</h2><p class="lead">Your suggestions help us improve our teaching and student experience.</p></div>
   <div class="grid">
-   <div class="card"><div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div><h3>Expert Teachers</h3><p>Learn concepts clearly from dedicated and supportive educators.</p></div>
-   <div class="card"><div class="icon"><i class="fa-solid fa-people-group"></i></div><h3>Small Batches</h3><p>More interaction, questions and individual attention in every class.</p></div>
-   <div class="card"><div class="icon"><i class="fa-solid fa-chart-line"></i></div><h3>Regular Progress</h3><p>Practice tests and feedback help students identify and improve weak areas.</p></div>
+   <div class="card"><div class="rating">★★★★★</div><p>“The teachers explain difficult concepts in a very simple way. Regular tests have made preparation much more organised.”</p><strong style="display:block;margin-top:12px">— Parent of Class 10 Student</strong></div>
+   <div class="card"><div class="rating">★★★★★</div><p>“I especially like the doubt sessions. I can ask questions without hesitation and get step-by-step explanations.”</p><strong style="display:block;margin-top:12px">— Class 9 Student</strong></div>
+   <div class="card"><div class="rating">★★★★☆</div><p>“The study material and weekly practice keep students consistent. Communication with parents is also helpful.”</p><strong style="display:block;margin-top:12px">— Parent of Class 8 Student</strong></div>
   </div>
-  <div class="stats">
-   <div class="stat"><strong>500+</strong>Students Guided</div>
-   <div class="stat"><strong>15+</strong>Expert Teachers</div>
-   <div class="stat"><strong>10+</strong>Courses</div>
-   <div class="stat"><strong>95%</strong>Parent Satisfaction</div>
+  <div class="form-wrap">
+   <form onsubmit="event.preventDefault(); alert('Thank you for your feedback!');">
+    <h3 style="font-size:1.5rem;margin-bottom:20px">Share Your Feedback</h3>
+    <div class="field"><label>Your Name</label><input type="text" placeholder="Enter your name" required></div>
+    <div class="field"><label>Rating</label><select required><option value="">Choose rating</option><option>★★★★★ — Excellent</option><option>★★★★☆ — Very Good</option><option>★★★☆☆ — Good</option><option>★★☆☆☆ — Needs Improvement</option><option>★☆☆☆☆ — Poor</option></select></div>
+    <div class="field"><label>Your Feedback</label><textarea placeholder="Write your feedback here..." required></textarea></div>
+    <button class="btn" type="submit"><i class="fa-solid fa-comment-dots"></i> Submit Feedback</button>
+   </form>
   </div>
  </div>
 </section>
