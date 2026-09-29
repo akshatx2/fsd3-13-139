@@ -21,10 +21,12 @@ const products = [
         price: 200
     }
 ];
+// app.get("/products", (req, res) => {
+//     res.status(200).send(products);
+// });
 app.get("/products", (req, res) => {
-    res.status(200).send(products);
+    res.status(200).json(products);
 });
-
 app.use((req, res) => {
     res.status(404).send("<h1>Page not found</h1>");
 });
