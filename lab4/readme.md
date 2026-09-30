@@ -33,9 +33,8 @@
 
 
 
-   ```
-      const{p1,p2,...rest}=product ;
-      log(rest) ;
+   ```const{p1,p2,...rest}=product 
+      log(rest) 
    ```
       - Exclude number of properties from any JSON object
 
